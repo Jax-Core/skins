@@ -1,0 +1,125 @@
+@import 'https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*,
+*:before,
+*:after {
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	background-color: rgb(12, 12, 12);
+}
+
+.has-text-almond {
+	color: blanchedalmond;
+}
+
+.has-text-smokywhite {
+	color: whitesmoke;
+}
+
+.has-background-transparent {
+	background-color: transparent;
+}
+
+.navbar.has-background-transparent {
+	transition-duration: 400ms;
+}
+
+.navbar.has-background-transparent.scrolled {
+	background-color: rgb(12, 12, 12);
+}
+
+.is-sticky {
+	position: sticky !important;
+	top: 0 !important;
+	bottom: 0 !important;
+}
+
+.navbar-item img {
+	max-height: 10rem;
+}
+
+.navbar-item img:hover {
+	cursor: pointer;
+	animation: coreanim 2.625s cubic-bezier(0.76, 0, 0.24, 1) 0ms infinite;
+}
+
+@keyframes coreanim {
+	0% {
+		transform: rotate(360deg);
+	}
+	80% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+.navbar-link:not(.is-arrowless)::after {
+	border-color: white;
+}
+
+.navbar a {
+	border-radius: 0.3rem;
+	transition-duration: 400ms;
+}
+
+a.has-background-transparent:hover {
+	background-color: #242424 !important;
+}
+
+.preview-image {
+	object-fit: cover;
+	height: 18.75rem !important;
+	border-radius: 5px;
+}
+
+#main-preview-box {
+	width: 100%;
+	background: linear-gradient(
+		135deg,
+		rgb(50, 50, 50) 0%,
+		rgb(35, 35, 35) 50%,
+		rgb(30, 30, 30) 60%,
+		rgb(35, 35, 35) 70%,
+		rgb(50, 50, 50) 100%
+	);
+}
+
+#main-preview-image {
+	width: calc(100% - 1.25rem);
+	margin: 1.25rem;
+	border-radius: 6px;
+	object-fit: cover;
+}
+
+#preview-cards .box:hover{
+    cursor: pointer;
+}
+
+@media screen and (min-width: 769px) {
+	.column {
+		display: flex !important;
+	}
+
+	.preview-image {
+		height: 12.5rem !important;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	#skins-preview {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#skins-preview .column {
+		flex: none;
+		width: 100%;
+	}
+}

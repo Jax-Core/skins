@@ -1,0 +1,20 @@
+const skindata = `[
+	{
+		"title": "ModularClocks",
+		"subs": "A modern clock for you desktop.",
+		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quis. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quis.",
+		"background": "img/skins/ModularClocks.png"
+	},
+	{
+		"title": "ModularPlayers",
+		"subs": "Control your songs from your desktop.",
+		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quis.",
+		"background": "img/skins/ModularPlayers.png"
+	},
+	{
+		"title": "ValliStart",
+		"subs": "A modular start menu replacement.",
+		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quis.",
+		"background": "img/skins/ValliStart.png"
+	}
+]`

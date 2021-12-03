@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- <link rel="stylesheet" href="css/debug.css"> -->
+		<title>Skins</title>
+	</head>
+	<body>
+		<nav
+			class="navbar has-background-transparent is-sticky"
+			aria-label="main navigation"
+		>
+			<div class="navbar-brand has-background-transparent">
+				<a class="navbar-item">
+					<img
+						id="nav-logo"
+						src="img/core.png"
+						height="42"
+						width="42"
+						alt="core logo"
+					/>
+				</a>
+				<p class="navbar-item has-text-white">JaxOriginals</p>
+
+				<a
+					role="button"
+					class="navbar-burger"
+					aria-label="menu"
+					aria-expanded="false"
+					data-target="navbarBasicExample"
+				>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+
+			<div
+				id="navbarBasicExample"
+				class="navbar-menu navbar-end has-background-transparent"
+			>
+				<div class="navbar-item has-background-transparent">
+					<a
+						class="
+							navbar-item
+							has-background-transparent has-text-white
+							m-1
+						"
+					>
+						About
+					</a>
+
+					<a
+						class="
+							navbar-item
+							has-background-transparent has-text-white
+							m-1
+							coredownload
+						"
+					>
+						Download
+					</a>
+
+					<a
+						class="
+							navbar-item
+							has-background-transparent has-text-white
+							m-1
+						"
+						id="donation"
+					>
+						Donate
+					</a>
+
+					<a
+						class="
+							navbar-item
+							has-background-transparent has-text-white
+							m-1
+						"
+					>
+						Skins
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<section class="section">
+			<div class="box" id="main-preview-box">
+				<div class="columns is-multiline" id="skins-preview">
+					<div
+						class="column is-half is-full-mobile"
+						id="currentSkinInfo"
+					>
+						<div
+							class="is-flex"
+							style="
+								width: 100%;
+								align-items: center;
+								padding: 1.25rem;
+							"
+						>
+							<div>
+								<h1 class="is-size-3" id="main-preview-title">
+									<strong class="has-text-almond">
+										Welcome to SkinsHub!
+									</strong>
+								</h1>
+								<h2
+									class="is-size-6 has-text-smokywhite pb-5"
+									id="main-preview-subtitle"
+								>
+									Download JaxCore widgets from here.
+								</h2>
+								<p
+									class="has-text-white"
+									id="main-preview-description"
+								>
+									Lorem ipsum dolor sit amet consectetur
+									adipisicing elit. Nam labore, quae
+									exercitationem facere nihil consectetur
+									sapiente, tempora dolores eum eaque, aliquam
+									laudantium totam ad necessitatibus harum
+									dolorum sequi molestias natus nostrum
+									libero!
+								</p>
+							</div>
+						</div>
+					</div>
+					<div
+						class="column is-half is-full-mobile"
+						id="currentSkinPreview"
+					>
+						<div style="width: calc(100% - 1.25rem)">
+							<img
+								src="img/SuitesPreview.png"
+								alt="ModularPlayers"
+								id="main-preview-image"
+							/>
+						</div>
+					</div>
+					<div
+						class="column is-full"
+						style="display: none !important"
+						id="main-preview-stats"
+					>
+						<div
+							class="
+								level
+								is-mobile
+								has-text-white has-text-centered
+								mt-1
+							"
+							style="width: 100%"
+						>
+							<div class="level-item">
+								<div>
+									<p class="heading">Stars</p>
+									<p class="title has-text-almond">10</p>
+								</div>
+							</div>
+							<div class="level-item">
+								<div>
+									<p class="heading">Favorites</p>
+									<p class="title has-text-almond">210</p>
+								</div>
+							</div>
+							<div class="level-item">
+								<div>
+									<p class="heading">Downloads</p>
+									<p class="title has-text-almond">1234</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="section">
+			<div class="container">
+				<div class="columns is-multiline is-centered" id="preview-cards">
+					<template id="cardTemplate">
+						<div
+							class="
+								column
+								is-one-third-widescreen
+								is-half-tablet
+								is-full-mobile
+							"
+						>
+							<div class="box">
+								<figure class="image mb-3">
+									<img src="" alt="" class="preview-image" />
+								</figure>
+								<p class="title"></p>
+								<p class="subtitle"></p>
+								<p class="skinDesc"></p>
+							</div>
+						</div>
+					</template>
+				</div>
+			</div>
+		</div>
+		<script src="data/skins.json"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
