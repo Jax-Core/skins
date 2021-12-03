@@ -85,7 +85,6 @@ a.has-background-transparent:hover {
 		135deg,
 		rgb(50, 50, 50) 0%,
 		rgb(35, 35, 35) 50%,
-		rgb(30, 30, 30) 60%,
 		rgb(35, 35, 35) 70%,
 		rgb(50, 50, 50) 100%
 	);
@@ -96,6 +95,16 @@ a.has-background-transparent:hover {
 	margin: 1.25rem;
 	border-radius: 6px;
 	object-fit: cover;
+}
+
+#preview-cards .box{
+    background: linear-gradient(
+		135deg,
+		rgb(50, 50, 50) 0%,
+		rgb(35, 35, 35) 50%,
+		rgb(35, 35, 35) 70%,
+		rgb(50, 50, 50) 100%
+	);
 }
 
 #preview-cards .box:hover{

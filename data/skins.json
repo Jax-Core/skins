@@ -1,4 +1,10 @@
 const skindata = `[
+    {
+        "title": "IdleStyle",
+		"subs": "Screensaver reimagined.",
+		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quis.",
+		"background": "img/skins/IdleStyle.png"
+    },
 	{
 		"title": "ModularClocks",
 		"subs": "A modern clock for you desktop.",

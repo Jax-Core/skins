@@ -47,3 +47,28 @@ function ShowMainPreview(data) {
 	mainPreviewImage.src = data.image
 	mainPreviewStats.style.display = 'flex'
 }
+
+let navScrollElements = document.querySelectorAll(
+	'.navbar.has-background-transparent'
+)
+
+window.addEventListener('scroll', (event) => {
+	var scrollTop =
+		window.pageYOffset !== undefined
+			? window.pageYOffset
+			: (
+					document.documentElement ||
+					document.body.parentNode ||
+					document.body
+			  ).scrollTop
+
+	if (scrollTop !== 0) {
+		navScrollElements.forEach((el) => {
+			el.classList.add('scrolled')
+		})
+	} else {
+		navScrollElements.forEach((el) => {
+			el.classList.remove('scrolled')
+		})
+	}
+})
