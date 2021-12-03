@@ -1,0 +1,2 @@
+# Skins
+Skins page
