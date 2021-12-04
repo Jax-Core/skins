@@ -1,113 +1,116 @@
-.modal{
-    justify-content: flex-start;
+.modal {
+	justify-content: flex-start;
 }
 
 @media screen and (max-width: 768px) {
-    .modal{
-        overflow-y: auto;
-    }
+	.modal {
+		overflow-y: auto;
+	}
 }
 
-.modal .box{
-    transform: translateY(100%);
-    opacity: 0;
+.modal .box {
+	transform: translateY(100%);
+	opacity: 0;
 }
 
-.modal.is-active .box{
-    animation-name: ShowModal;
-    animation-timing-function: ease-out;
-    animation-duration: 400ms;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+.modal.is-active .box {
+	animation-name: ShowModal;
+	animation-timing-function: ease-out;
+	animation-duration: 400ms;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
 @keyframes ShowModal {
-    from{
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0%);
-        opacity: 1;
-    }
+	from {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0%);
+		opacity: 1;
+	}
 }
 
-
-.modal.is-inactive .box{
-    animation-name: HideModal;
-    animation-timing-function: ease-in;
-    animation-duration: 400ms;
-    animation-iteration-count: 1;
-    /* animation-direction: reverse; */
-    animation-fill-mode: forwards;
+.modal.is-inactive .box {
+	animation-name: HideModal;
+	animation-timing-function: ease-in;
+	animation-duration: 400ms;
+	animation-iteration-count: 1;
+	/* animation-direction: reverse; */
+	animation-fill-mode: forwards;
 }
 
 @keyframes HideModal {
-    from{
-        transform: translateY(0%);
-        opacity: 1;
-    }
-    to{
-        transform: translateY(100%);
-        opacity: 0;
-    }
+	from {
+		transform: translateY(0%);
+		opacity: 1;
+	}
+	to {
+		transform: translateY(100%);
+		opacity: 0;
+	}
 }
 
-.modal .modal-background{
-    position: fixed;
-    opacity: 0;
-    padding: 5rem 0;
-    backdrop-filter: blur(10px);
+.modal .modal-background {
+	position: fixed;
+	opacity: 0;
+	padding: 5rem 0;
+	backdrop-filter: blur(10px);
 }
 
-.modal.is-active .modal-background{
-    animation-name: ShowModalBack;
-    animation-timing-function: ease-out;
-    animation-duration: 400ms;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+.modal.is-active .modal-background {
+	animation-name: ShowModalBack;
+	animation-timing-function: ease-out;
+	animation-duration: 400ms;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
-.modal.is-inactive .modal-background{
-    animation-name: HideModalBack;
-    animation-timing-function: ease-in;
-    animation-duration: 400ms;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+.modal.is-inactive .modal-background {
+	animation-name: HideModalBack;
+	animation-timing-function: ease-in;
+	animation-duration: 400ms;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
 }
 
 @keyframes ShowModalBack {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes HideModalBack {
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-    }
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
 }
 
-.modal-spacer{
-    width: 100%;
-    padding: 5rem;
+.modal-spacer {
+	width: 100%;
+	padding: 5rem;
 }
 
 @media screen and (max-width: 768px) {
-    .modal-spacer{
-        padding-top: 20vh;
-    }
+	.modal-spacer {
+		padding-top: 20vh;
+	}
+
+	.modal .columns {
+		flex-direction: column-reverse;
+	}
 }
 
 #main-preview-box {
-    position: relative;
-    margin: auto 2rem 0;
+	position: relative;
+	margin: auto 2rem 0;
 	width: calc(100% - 4rem);
 	background: linear-gradient(
 		135deg,
@@ -116,7 +119,7 @@
 		rgb(35, 35, 35) 70%,
 		rgb(50, 50, 50) 100%
 	);
-    border-radius: 0.7rem 0.7rem 0 0;
+	border-radius: 0.7rem 0.7rem 0 0;
 }
 
 #main-preview-image {
@@ -126,6 +129,6 @@
 	object-fit: cover;
 }
 
-#main-preview-title{
-    text-shadow: 0 0 5px whitesmoke;
+#main-preview-title {
+	text-shadow: 0 0 5px whitesmoke;
 }
