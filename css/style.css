@@ -35,7 +35,8 @@ body {
 }
 
 .has-text-almond {
-	color: blanchedalmond;
+	color: whitesmoke;
+    text-shadow: 0 0 3px white;
 }
 
 .has-text-smokywhite {
