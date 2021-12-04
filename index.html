@@ -6,7 +6,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/style.css" />
 		<!-- <link rel="stylesheet" href="css/debug.css"> -->
-        <link rel="shortcut icon" href="img/core.png" type="image/png">
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+		<link rel="shortcut icon" href="img/core.png" type="image/png" />
 		<title>Skins</title>
 	</head>
 	<body>
@@ -44,14 +46,13 @@
 				class="navbar-menu navbar-end has-background-transparent"
 			>
 				<div class="navbar-item has-background-transparent">
-                    <a
+					<a
 						class="
 							navbar-item
 							has-background-transparent has-text-white
 							m-1
 						"
-
-                        href="https://jax-core.github.io"
+						href="https://jax-core.github.io"
 					>
 						Home
 					</a>
@@ -83,8 +84,7 @@
 							has-background-transparent has-text-white
 							m-1
 						"
-
-                        href="https://jax-core.github.io/skins"
+						href="https://jax-core.github.io/skins"
 					>
 						Skins
 					</a>
@@ -92,9 +92,10 @@
 			</div>
 		</nav>
 
-		<section class="section">
-			<div class="box" id="main-preview-box">
-				<div class="columns is-multiline" id="skins-preview">
+		<section class="modal" id="main-modal">
+			<div class="modal-background" id="modal-background"></div>
+			<div class="box" id="main-preview-box" style="position: relative; margin-top: auto;">
+				<div class="columns is-multiline is-vcentered" id="skins-preview">
 					<div
 						class="column is-half is-full-mobile"
 						id="currentSkinInfo"
@@ -108,29 +109,45 @@
 							"
 						>
 							<div>
-								<h1 class="is-size-3" id="main-preview-title">
-									<strong class="has-text-almond">
-										Welcome to SkinsHub!
-									</strong>
-								</h1>
+								<h1
+									class="
+										is-size-3
+										has-text-white has-text-weight-semibold
+										mb-2
+									"
+									id="main-preview-title"
+								></h1>
 								<h2
-									class="is-size-6 has-text-smokywhite pb-5"
+									class="is-size-6 has-text-smokywhite mb-5"
 									id="main-preview-subtitle"
-								>
-									Download JaxCore widgets from here.
-								</h2>
+								></h2>
 								<p
-									class="has-text-white"
+									class="has-text-white mb-5"
 									id="main-preview-description"
+								></p>
+								<div
+									class="buttons"
+									style="justify-content: flex-start"
 								>
-									Lorem ipsum dolor sit amet consectetur
-									adipisicing elit. Nam labore, quae
-									exercitationem facere nihil consectetur
-									sapiente, tempora dolores eum eaque, aliquam
-									laudantium totam ad necessitatibus harum
-									dolorum sequi molestias natus nostrum
-									libero!
-								</p>
+									<button class="button" id="deviantart-button">
+										<span class="icon">
+											<i class="fab fa-deviantart"></i>
+										</span>
+										<span>DeviantArt</span>
+									</button>
+									<button class="button" id="download-button">
+										<span class="icon">
+											<i class="fas fa-download"></i>
+										</span>
+										<span>Download</span>
+									</button>
+									<button class="button" id="install-button">
+										<span class="icon">
+											<i class="fas fa-tint"></i>
+										</span>
+										<span>Install</span>
+									</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -144,40 +161,6 @@
 								alt="ModularPlayers"
 								id="main-preview-image"
 							/>
-						</div>
-					</div>
-					<div
-						class="column is-full"
-						style="display: none !important"
-						id="main-preview-stats"
-					>
-						<div
-							class="
-								level
-								is-mobile
-								has-text-white has-text-centered
-								mt-1
-							"
-							style="width: 100%"
-						>
-							<div class="level-item">
-								<div>
-									<p class="heading">Stars</p>
-									<p class="title has-text-almond">10</p>
-								</div>
-							</div>
-							<div class="level-item">
-								<div>
-									<p class="heading">Favorites</p>
-									<p class="title has-text-almond">210</p>
-								</div>
-							</div>
-							<div class="level-item">
-								<div>
-									<p class="heading">Downloads</p>
-									<p class="title has-text-almond">1234</p>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -196,21 +179,29 @@
 								is-full-mobile
 							"
 						>
-							<div class="box">
+							<div class="box" data-deviantart="" data-download="" data-install="">
 								<figure class="image mb-3">
 									<img src="" alt="" class="preview-image" />
 								</figure>
 								<p class="title is-size-4 has-text-almond"></p>
-								<p class="subtitle is-size-7 has-text-smokywhite"></p>
-								<p class="skinDesc is-size-6 has-text-white"></p>
+								<p
+									class="
+										subtitle
+										is-size-7
+										has-text-smokywhite
+									"
+								></p>
+								<p
+									class="skinDesc is-size-6 has-text-white"
+								></p>
 							</div>
 						</div>
 					</template>
 				</div>
 			</div>
 		</div>
-		<script src="data/skins.json"></script>
-        <script src="js/Clamp.js"></script>
+		<script src="data/skins.js"></script>
+		<script src="js/Clamp.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

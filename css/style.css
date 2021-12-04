@@ -1,16 +1,37 @@
 @import 'https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css';
-
+@import url('modal.css');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* @import url('../fonts/fontawesome-brands.otf');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'); */
 
-*,
-*:before,
-*:after {
+* {
 	font-family: 'Poppins', sans-serif;
 }
 
 body {
 	min-height: 100vh;
 	background-color: rgb(12, 12, 12);
+}
+
+.button{
+    background-color: rgba(0,0,0,0);
+    transition-duration: 200ms;
+}
+
+.button:hover{
+    background-color: whitesmoke;
+}
+
+.button span{
+    color: whitesmoke;
+}
+
+.button:hover span{
+    color: rgb(35, 35, 35);
+}
+
+.button.is-loading span{
+    color: rgb(0,0,0,0);
 }
 
 .has-text-almond {
@@ -121,7 +142,7 @@ a.has-background-transparent:hover {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
 	#skins-preview {
 		display: flex;
 		flex-direction: column;
@@ -131,4 +152,16 @@ a.has-background-transparent:hover {
 		flex: none;
 		width: 100%;
 	}
+
+    #currentSkinPreview div{
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    #currentSkinPreview img{
+        width: auto;
+        max-height: 300px;
+        min-height: 150px;
+    }
 }

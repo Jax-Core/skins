@@ -1,0 +1,97 @@
+.modal{
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .modal{
+        overflow-y: auto;
+    }
+}
+
+.modal .box{
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.modal.is-active .box{
+    animation-name: ShowModal;
+    animation-timing-function: ease-out;
+    animation-duration: 400ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ShowModal {
+    from{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+.modal.is-inactive .box{
+    animation-name: HideModal;
+    animation-timing-function: ease-in;
+    animation-duration: 400ms;
+    animation-iteration-count: 1;
+    /* animation-direction: reverse; */
+    animation-fill-mode: forwards;
+}
+
+@keyframes HideModal {
+    from{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.modal .modal-background{
+    opacity: 0;
+    backdrop-filter: blur(10px);
+}
+
+.modal.is-active .modal-background{
+    animation-name: ShowModalBack;
+    animation-timing-function: ease-out;
+    animation-duration: 400ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.modal.is-inactive .modal-background{
+    animation-name: HideModalBack;
+    animation-timing-function: ease-in;
+    animation-duration: 400ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes ShowModalBack {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes HideModalBack {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+#main-preview-title{
+    text-shadow: 0 0 5px whitesmoke;
+}
