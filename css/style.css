@@ -100,24 +100,6 @@ a.has-background-transparent:hover {
 	border-radius: 5px;
 }
 
-#main-preview-box {
-	width: 100%;
-	background: linear-gradient(
-		135deg,
-		rgb(50, 50, 50) 0%,
-		rgb(35, 35, 35) 50%,
-		rgb(35, 35, 35) 70%,
-		rgb(50, 50, 50) 100%
-	);
-}
-
-#main-preview-image {
-	width: calc(100% - 1.25rem);
-	margin: 1.25rem;
-	border-radius: 6px;
-	object-fit: cover;
-}
-
 #preview-cards .box{
     background: linear-gradient(
 		135deg,

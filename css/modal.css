@@ -54,6 +54,7 @@
 }
 
 .modal .modal-background{
+    position: fixed;
     opacity: 0;
     padding: 5rem 0;
     backdrop-filter: blur(10px);
@@ -102,6 +103,27 @@
     .modal-spacer{
         padding-top: 20vh;
     }
+}
+
+#main-preview-box {
+    position: relative;
+    margin: auto 2rem 0;
+	width: calc(100% - 4rem);
+	background: linear-gradient(
+		135deg,
+		rgb(50, 50, 50) 0%,
+		rgb(35, 35, 35) 50%,
+		rgb(35, 35, 35) 70%,
+		rgb(50, 50, 50) 100%
+	);
+    border-radius: 0.7rem 0.7rem 0 0;
+}
+
+#main-preview-image {
+	width: calc(100% - 1.25rem);
+	margin: 1.25rem;
+	border-radius: 6px;
+	object-fit: cover;
 }
 
 #main-preview-title{
