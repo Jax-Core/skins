@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 	const cardBoxes = document.querySelectorAll('#preview-cards .box')
 
-	cardBoxes.forEach((card) => {
+    cardBoxes.forEach((card) => {
+		$clamp(card.querySelector('.skinDesc'), { clamp: 3 })
 		card.addEventListener('click', (event) => {
-			console.log(card)
 			ShowMainPreview({
 				title: card.querySelector('.title').textContent,
 				subs: card.querySelector('.subtitle').textContent,
