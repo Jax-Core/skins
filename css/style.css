@@ -4,6 +4,10 @@
 /* @import url('../fonts/fontawesome-brands.otf');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'); */
 
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	font-family: 'Poppins', sans-serif;
 }
@@ -13,30 +17,34 @@ body {
 	background-color: rgb(12, 12, 12);
 }
 
-.button{
-    background-color: rgba(0,0,0,0);
-    transition-duration: 200ms;
+.button {
+	background-color: rgba(0, 0, 0, 0);
+	transition-duration: 200ms;
 }
 
-.button:hover{
-    background-color: whitesmoke;
+.button:hover {
+	background-color: whitesmoke;
 }
 
-.button span{
-    color: whitesmoke;
+.button span {
+	color: whitesmoke;
 }
 
-.button:hover span{
-    color: rgb(35, 35, 35);
+.button:hover span {
+	color: rgb(35, 35, 35);
 }
 
-.button.is-loading span{
-    color: rgb(0,0,0,0);
+.button.is-loading span {
+	color: rgb(0, 0, 0, 0);
 }
 
 .has-text-almond {
 	color: whitesmoke;
-    text-shadow: 0 0 3px white;
+	text-shadow: 0 0 3px white;
+}
+
+.card-title {
+	letter-spacing: 0.09rem;
 }
 
 .has-text-smokywhite {
@@ -88,11 +96,59 @@ body {
 
 .navbar a {
 	border-radius: 0.3rem;
-	transition-duration: 400ms;
+	transition-duration: 300ms;
 }
 
-a.has-background-transparent:hover {
+.navbar a.has-background-transparent:hover {
 	background-color: #242424 !important;
+}
+
+#page-links {
+    background: linear-gradient(
+		135deg,
+		rgb(50, 50, 50) 0%,
+		rgb(35, 35, 35) 50%,
+		rgb(35, 35, 35) 70%,
+		rgb(50, 50, 50) 100%
+	);
+    padding: 6rem 1rem 2rem;
+    border-radius: 0 0 1rem 1rem;
+	position: fixed;
+	top: 50%;
+	left: 0;
+    width: fit-content;
+    height: fit-content;
+	z-index: 99;
+	transform: translateX(-70%) rotate(270deg);
+    transition-duration: 200ms;
+}
+
+#page-links:hover{
+    transform: translateX(-54%) rotate(270deg);
+}
+
+.pagination-list{
+    flex-direction: row-reverse;
+}
+
+.pagination-link {
+	color: whitesmoke;
+	background-color: rgba(0, 0, 0, 0);
+	transition-duration: 300ms;
+}
+
+.pagination-link.is-active {
+	color: rgb(35, 35, 35);
+	background-color: rgba(245, 245, 245, 0.89);
+}
+
+.pagination-link:hover {
+	color: rgb(35, 35, 35);
+	background-color: whitesmoke;
+}
+
+a.title:hover{
+    color: whitesmoke;
 }
 
 .preview-image {
@@ -101,8 +157,8 @@ a.has-background-transparent:hover {
 	border-radius: 5px;
 }
 
-#preview-cards .box{
-    background: linear-gradient(
+.preview-card {
+	background: linear-gradient(
 		135deg,
 		rgb(50, 50, 50) 0%,
 		rgb(35, 35, 35) 50%,
@@ -111,8 +167,8 @@ a.has-background-transparent:hover {
 	);
 }
 
-#preview-cards .box:hover{
-    cursor: pointer;
+#preview-cards .box:hover {
+	cursor: pointer;
 }
 
 @media screen and (min-width: 769px) {
@@ -136,15 +192,33 @@ a.has-background-transparent:hover {
 		width: 100%;
 	}
 
-    #currentSkinPreview div{
-        width: 100% !important;
-        display: flex;
-        justify-content: center;
-    }
+	#currentSkinPreview div {
+		width: 100% !important;
+		display: flex;
+		justify-content: center;
+	}
 
-    #currentSkinPreview img{
-        width: auto;
-        max-height: 300px;
-        min-height: 150px;
-    }
+	#currentSkinPreview img {
+		width: auto;
+		max-height: 300px;
+		min-height: 150px;
+	}
+}
+
+.hero-heading {
+	background: linear-gradient(90deg, #ff220f 0%, #fdc300 200%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* Sniped from stack overflow, disables text selection */
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

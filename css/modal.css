@@ -1,5 +1,6 @@
 .modal {
 	justify-content: flex-start;
+    z-index: 100;
 }
 
 @media screen and (max-width: 768px) {

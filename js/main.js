@@ -39,12 +39,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		)
 	})
 
-	const cards = document.querySelector('#preview-cards')
-	const skinsJson = JSON.parse(skindata)
+	const module_cards = document.getElementById('module-preview-cards')
+	const widget_cards = document.getElementById('widget-preview-cards')
+	const modulesJson = JSON.parse(modules_data)
+	const widgetsJson = JSON.parse(widgets_data)
 
 	let cardTemplate = document.getElementById('cardTemplate')
 
-	skinsJson.forEach((skin) => {
+	modulesJson.forEach((skin) => {
 		let cardClone = cardTemplate.content.cloneNode(true)
 
 		cardClone.querySelector('.image').querySelector('.preview-image').src =
@@ -59,10 +61,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		box.setAttribute('data-download', skin.download_api)
 		box.setAttribute('data-install', skin.install_name)
 
-		cards.appendChild(cardClone)
+		module_cards.appendChild(cardClone)
 	})
 
-	const cardBoxes = document.querySelectorAll('#preview-cards .box')
+	widgetsJson.forEach((skin) => {
+		let cardClone = cardTemplate.content.cloneNode(true)
+
+		cardClone.querySelector('.image').querySelector('.preview-image').src =
+			skin.background
+		cardClone.querySelector('.title').textContent = skin.title
+		cardClone.querySelector('.subtitle').textContent = skin.subs
+		cardClone.querySelector('.skinDesc').textContent = skin.description
+
+		let box = cardClone.querySelector('.box')
+
+		box.setAttribute('data-deviantart', skin.deviantart)
+		box.setAttribute('data-download', skin.download_api)
+		box.setAttribute('data-install', skin.install_name)
+
+		widget_cards.appendChild(cardClone)
+	})
+
+	const cardBoxes = document.querySelectorAll('.preview-card')
 
 	cardBoxes.forEach((card) => {
 		$clamp(card.querySelector('.skinDesc'), { clamp: 3 })
@@ -80,6 +100,40 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			})
 		})
 	})
+
+	let navHeight = document
+		.getElementById('navbar')
+		.getBoundingClientRect().height
+
+	document
+		.querySelector('#modules-page-link')
+		.addEventListener('click', (event) => {
+			let top =
+				document.getElementById('modules').getBoundingClientRect().top -
+				navHeight
+			if (top != 0) {
+				window.scrollTo(
+					0,
+					top - document.body.getBoundingClientRect().top
+				)
+			}
+		})
+	document
+		.querySelector('#widgets-page-link')
+		.addEventListener('click', (event) => {
+			let top =
+				document.getElementById('widgets').getBoundingClientRect().top -
+				navHeight
+			console.log(document.body.getBoundingClientRect().top)
+			if (top != 0) {
+				window.scrollTo(
+					0,
+					top - document.body.getBoundingClientRect().top
+				)
+			}
+		})
+
+	SetPage()
 })
 
 var modal = document.getElementById('main-modal')
@@ -164,6 +218,32 @@ function DownloadLatestSkin(api_url) {
 		})
 }
 
+let modulesSection = document.getElementById('modules')
+let widgetsSection = document.getElementById('widgets')
+
+let modulesPageLink = document.getElementById('modules-page-link')
+let widgetsPageLink = document.getElementById('widgets-page-link')
+
+function SetPage() {
+	if (
+		modulesSection.getBoundingClientRect().top < window.innerHeight / 5 &&
+		modulesSection.getBoundingClientRect().bottom > window.innerHeight / 5
+	) {
+		modulesPageLink.classList.add('is-active')
+	} else {
+		modulesPageLink.classList.remove('is-active')
+	}
+
+	if (
+		widgetsSection.getBoundingClientRect().top < window.innerHeight / 5 &&
+		widgetsSection.getBoundingClientRect().bottom > window.innerHeight / 5
+	) {
+		widgetsPageLink.classList.add('is-active')
+	} else {
+		widgetsPageLink.classList.remove('is-active')
+	}
+}
+
 window.addEventListener('scroll', (event) => {
 	var scrollTop =
 		window.pageYOffset !== undefined
@@ -183,4 +263,6 @@ window.addEventListener('scroll', (event) => {
 			el.classList.remove('scrolled')
 		})
 	}
+
+	SetPage()
 })

@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/style.css" />
 		<!-- <link rel="stylesheet" href="css/debug.css"> -->
-        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
 		<link rel="shortcut icon" href="img/core.png" type="image/png" />
 		<title>Skins</title>
@@ -15,6 +15,7 @@
 		<nav
 			class="navbar has-background-transparent is-sticky"
 			aria-label="main navigation"
+            id="navbar"
 		>
 			<div class="navbar-brand has-background-transparent">
 				<a class="navbar-item">
@@ -92,11 +93,99 @@
 			</div>
 		</nav>
 
-		<section class="modal" id="main-modal">
+		<div id="page-links">
+			<div class="pagination is-centered" aria-label="pagination">
+				<ul class="pagination-list">
+					<li>
+						<a
+							class="pagination-link"
+							aria-label="Goto page 1"
+							id="modules-page-link"
+							>Modules</a
+						>
+					</li>
+					<li>
+						<a
+							class="pagination-link"
+							aria-label="Goto page 2"
+							id="widgets-page-link"
+							>Widgets</a
+						>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="section" id="modules">
+			<div class="hero">
+				<div class="hero-body">
+					<div class="columns is-vcentered">
+						<div class="column is-narrow">
+							<a class="title is-size-2 has-text-almond" href="#modules">
+								Modules
+                            </a>
+						</div>
+						<div class="column">
+							<p
+								style="
+									width: 100%;
+									padding-top: 3px;
+									border-radius: 1.5px;
+									background-color: whitesmoke;
+									box-shadow: 0 0 4px white;
+								"
+							></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div
+					class="columns is-multiline"
+					id="module-preview-cards"
+				></div>
+			</div>
+		</div>
+
+		<div class="section" id="widgets">
+			<div class="hero">
+				<div class="hero-body">
+					<div class="columns is-vcentered">
+						<div class="column is-narrow">
+							<a class="title is-size-2 has-text-almond" href="#widgets">
+								Widgets
+                            </a>
+						</div>
+						<div class="column">
+							<p
+								style="
+									width: 100%;
+									padding-top: 3px;
+									border-radius: 1.5px;
+									background-color: whitesmoke;
+									box-shadow: 0 0 4px white;
+								"
+							></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div
+					class="columns is-multiline"
+					id="widget-preview-cards"
+				></div>
+			</div>
+		</div>
+
+        <section class="modal" id="main-modal">
 			<div class="modal-background" id="modal-background"></div>
-            <div class="modal-spacer"></div>
+			<div class="modal-spacer"></div>
 			<div class="box" id="main-preview-box">
-				<div class="columns is-multiline is-vcentered" id="skins-preview">
+				<div
+					class="columns is-multiline is-vcentered"
+					id="skins-preview"
+				>
 					<div
 						class="column is-half is-full-mobile"
 						id="currentSkinInfo"
@@ -130,7 +219,10 @@
 									class="buttons"
 									style="justify-content: flex-start"
 								>
-									<button class="button" id="deviantart-button">
+									<button
+										class="button"
+										id="deviantart-button"
+									>
 										<span class="icon">
 											<i class="fab fa-deviantart"></i>
 										</span>
@@ -168,41 +260,28 @@
 			</div>
 		</section>
 
-		<div class="section">
-			<div class="container">
-				<div class="columns is-multiline" id="preview-cards">
-					<template id="cardTemplate">
-						<div
-							class="
-								column
-								is-one-third-widescreen
-								is-half-tablet
-								is-full-mobile
-							"
-						>
-							<div class="box" data-deviantart="" data-download="" data-install="">
-								<figure class="image mb-3">
-									<img src="" alt="" class="preview-image" />
-								</figure>
-								<p class="title is-size-4 has-text-almond"></p>
-								<p
-									class="
-										subtitle
-										is-size-7
-										has-text-smokywhite
-									"
-								></p>
-								<p
-									class="skinDesc is-size-6 has-text-white"
-								></p>
-							</div>
-						</div>
-					</template>
-				</div>
-			</div>
-		</div>
 		<script src="data/skins.js"></script>
 		<script src="js/Clamp.js"></script>
 		<script src="js/main.js"></script>
 	</body>
+
+	<template id="cardTemplate">
+		<div
+			class="column is-one-third-widescreen is-half-tablet is-full-mobile"
+		>
+			<div
+				class="box preview-card"
+				data-deviantart=""
+				data-download=""
+				data-install=""
+			>
+				<figure class="image mb-3">
+					<img src="" alt="" class="preview-image" />
+				</figure>
+				<p class="title is-size-4 has-text-almond card-title"></p>
+				<p class="subtitle is-size-7 has-text-smokywhite"></p>
+				<p class="skinDesc is-size-6 has-text-white"></p>
+			</div>
+		</div>
+	</template>
 </html>
