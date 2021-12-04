@@ -55,6 +55,7 @@
 
 .modal .modal-background{
     opacity: 0;
+    padding: 5rem 0;
     backdrop-filter: blur(10px);
 }
 
@@ -89,6 +90,17 @@
     }
     to{
         opacity: 0;
+    }
+}
+
+.modal-spacer{
+    width: 100%;
+    padding: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-spacer{
+        padding-top: 20vh;
     }
 }
 
