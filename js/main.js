@@ -105,35 +105,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
 		.getElementById('navbar')
 		.getBoundingClientRect().height
 
-	document
-		.querySelector('#modules-page-link')
-		.addEventListener('click', (event) => {
-			let top =
-				document.getElementById('modules').getBoundingClientRect().top -
-				navHeight
-			if (top != 0) {
-				window.scrollTo(
-					0,
-					top - document.body.getBoundingClientRect().top
-				)
-			}
-		})
-	document
-		.querySelector('#widgets-page-link')
-		.addEventListener('click', (event) => {
-			let top =
-				document.getElementById('widgets').getBoundingClientRect().top -
-				navHeight
-			console.log(document.body.getBoundingClientRect().top)
-			if (top != 0) {
-				window.scrollTo(
-					0,
-					top - document.body.getBoundingClientRect().top
-				)
-			}
-		})
+	let modulePreviewCards = document.getElementById('module-preview-cards')
+	let widgetPreviewCards = document.getElementById('widget-preview-cards')
+	let modulesPageLink = document.querySelector('#modules-page-link')
+	let widgetsPageLink = document.querySelector('#widgets-page-link')
 
-	SetPage()
+	modulesPageLink.addEventListener('click', (event) => {
+		widgetsPageLink.classList.remove('is-active')
+		modulesPageLink.classList.add('is-active')
+		widgetPreviewCards.classList.remove('is-active')
+		modulePreviewCards.classList.add('is-active')
+	})
+
+	widgetsPageLink.addEventListener('click', (event) => {
+		modulesPageLink.classList.remove('is-active')
+		widgetsPageLink.classList.add('is-active')
+		modulePreviewCards.classList.remove('is-active')
+		widgetPreviewCards.classList.add('is-active')
+	})
 })
 
 var modal = document.getElementById('main-modal')
@@ -218,32 +207,6 @@ function DownloadLatestSkin(api_url) {
 		})
 }
 
-let modulesSection = document.getElementById('modules')
-let widgetsSection = document.getElementById('widgets')
-
-let modulesPageLink = document.getElementById('modules-page-link')
-let widgetsPageLink = document.getElementById('widgets-page-link')
-
-function SetPage() {
-	if (
-		modulesSection.getBoundingClientRect().top < window.innerHeight / 5 &&
-		modulesSection.getBoundingClientRect().bottom > window.innerHeight / 5
-	) {
-		modulesPageLink.classList.add('is-active')
-	} else {
-		modulesPageLink.classList.remove('is-active')
-	}
-
-	if (
-		widgetsSection.getBoundingClientRect().top < window.innerHeight / 5 &&
-		widgetsSection.getBoundingClientRect().bottom > window.innerHeight / 5
-	) {
-		widgetsPageLink.classList.add('is-active')
-	} else {
-		widgetsPageLink.classList.remove('is-active')
-	}
-}
-
 window.addEventListener('scroll', (event) => {
 	var scrollTop =
 		window.pageYOffset !== undefined
@@ -264,5 +227,5 @@ window.addEventListener('scroll', (event) => {
 		})
 	}
 
-	SetPage()
+	// SetPage()
 })

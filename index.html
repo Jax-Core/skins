@@ -93,7 +93,7 @@
 			</div>
 		</nav>
 
-		<div id="page-links">
+		<!-- <div id="page-links">
 			<div class="pagination is-centered" aria-label="pagination">
 				<ul class="pagination-list">
 					<li>
@@ -114,14 +114,14 @@
 					</li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="section" id="modules">
+		<div class="section" id="modules" style="padding-top: 0;">
 			<div class="hero">
 				<div class="hero-body">
-					<div class="columns is-vcentered">
+					<div class="columns is-mobile is-vcentered">
 						<div class="column is-narrow">
-							<a class="title is-size-2 has-text-almond" href="#modules">
+							<a class="title is-size-2 is-size-3-mobile has-text-almond page-links is-active" id="modules-page-link">
 								Modules
                             </a>
 						</div>
@@ -132,22 +132,31 @@
 									padding-top: 3px;
 									border-radius: 1.5px;
 									background-color: whitesmoke;
-									box-shadow: 0 0 4px white;
+									box-shadow: 0 0 3px white;
 								"
 							></p>
+						</div>
+                        <div class="column is-narrow">
+							<a class="title is-size-2 is-size-3-mobile has-text-almond has-text-right page-links" id="widgets-page-link">
+								Widgets
+                            </a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="container">
 				<div
-					class="columns is-multiline"
+					class="columns is-multiline is-active preview-cards-columns"
 					id="module-preview-cards"
+				></div>
+                <div
+					class="columns is-multiline preview-cards-columns"
+					id="widget-preview-cards"
 				></div>
 			</div>
 		</div>
 
-		<div class="section" id="widgets">
+		<!-- <div class="section" id="widgets">
 			<div class="hero">
 				<div class="hero-body">
 					<div class="columns is-vcentered">
@@ -176,7 +185,7 @@
 					id="widget-preview-cards"
 				></div>
 			</div>
-		</div>
+		</div> -->
 
         <section class="modal" id="main-modal">
 			<div class="modal-background" id="modal-background"></div>

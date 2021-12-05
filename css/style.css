@@ -104,51 +104,38 @@ body {
 }
 
 #page-links {
-    background: linear-gradient(
+	background: linear-gradient(
 		135deg,
 		rgb(50, 50, 50) 0%,
 		rgb(35, 35, 35) 50%,
 		rgb(35, 35, 35) 70%,
 		rgb(50, 50, 50) 100%
 	);
-    padding: 6rem 1rem 2rem;
-    border-radius: 0 0 1rem 1rem;
+	padding: 6rem 1rem 2rem;
+	border-radius: 0 0 1rem 1rem;
 	position: fixed;
 	top: 50%;
 	left: 0;
-    width: fit-content;
-    height: fit-content;
+	width: fit-content;
+	height: fit-content;
 	z-index: 99;
 	transform: translateX(-70%) rotate(270deg);
-    transition-duration: 200ms;
+	transition-duration: 200ms;
 }
 
-#page-links:hover{
-    transform: translateX(-54%) rotate(270deg);
+.page-links {
+    color: rgb(160, 160, 160);
+    text-shadow: none;
+    transition-duration: 300ms;
 }
 
-.pagination-list{
-    flex-direction: row-reverse;
+.page-links.is-active {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 3px white;
 }
 
-.pagination-link {
+a.title:hover {
 	color: whitesmoke;
-	background-color: rgba(0, 0, 0, 0);
-	transition-duration: 300ms;
-}
-
-.pagination-link.is-active {
-	color: rgb(35, 35, 35);
-	background-color: rgba(245, 245, 245, 0.89);
-}
-
-.pagination-link:hover {
-	color: rgb(35, 35, 35);
-	background-color: whitesmoke;
-}
-
-a.title:hover{
-    color: whitesmoke;
 }
 
 .preview-image {
@@ -167,8 +154,29 @@ a.title:hover{
 	);
 }
 
-#preview-cards .box:hover {
+.preview-cards-columns box {
 	cursor: pointer;
+}
+
+.preview-cards-columns {
+	opacity: 0;
+	transition-duration: 500ms;
+    z-index: 1;
+}
+
+.preview-cards-columns.is-active {
+	opacity: 1;
+    z-index: 2;
+}
+
+#module-preview-cards {
+	position: relative;
+}
+
+#widget-preview-cards {
+	position: absolute;
+	top: 0.75rem;
+	left: 0;
 }
 
 @media screen and (min-width: 769px) {
@@ -214,11 +222,11 @@ a.title:hover{
 
 /* Sniped from stack overflow, disables text selection */
 * {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
