@@ -51,7 +51,7 @@ const widgets_data = `[
         "title": "CombiLaunch",
 		"subs": "Launch with combinations.",
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto eaque aliquid perferendis saepe ipsa recusandae tempore perspiciatis non est quis vel, vitae reiciendis magnam voluptatum obcaecati, consequuntur sequi, distinctio cum nisi voluptas dolores fuga unde minima. Enim accusamus fugit, possimus tenetur minus praesentium veritatis, aliquam officia quod ex sequi sit eum libero porro, esse incidunt quaerat maiores molestias.",
-		"background": "img/skins/IdleStyle.png",
+		"background": "img/skins/Combilaunch.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/Combilaunch-v1-3-881177085",
         "download_api": "https://api.github.com/repos/EnhancedJax/Combilaunch/releases/latest",
         "install_name": "Combilaunch"
