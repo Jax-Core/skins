@@ -13,8 +13,8 @@ const modules_data = `[
 		"subs": "Launch apps with your keyboard.",
 		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quis.",
 		"background": "img/skins/KeyLaunch.png",
-        "deviantart": "https://www.deviantart.com/jaxoriginals/art/ModularClocks-v2-1-883898019",
-        "download_api": "https://api.github.com/repos/EnhancedJax/ModularClocks/releases/latest",
+        "deviantart": "https://www.deviantart.com/jaxoriginals/art/Keylaunch-1-45-890749449",
+        "download_api": "https://api.github.com/repos/EnhancedJax/KeyLaunch/releases/latest",
         "install_name": "KeyLaunch"
 	},
 	{
@@ -22,8 +22,8 @@ const modules_data = `[
 		"subs": "Stream your keys strokes with style.",
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto eaque aliquid perferendis saepe ipsa recusandae tempore perspiciatis non est quis vel, vitae reiciendis magnam voluptatum obcaecati, consequuntur sequi, distinctio cum nisi voluptas dolores fuga unde minima. Enim accusamus fugit, possimus tenetur minus praesentium veritatis, aliquam officia quod ex sequi sit eum libero porro, esse incidunt quaerat maiores molestias.",
 		"background": "img/skins/KeyStrokes.png",
-        "deviantart": "https://www.deviantart.com/jaxoriginals/art/ModularPlayers-v1-3-886577256",
-        "download_api": "https://api.github.com/repos/EnhancedJax/ModularPlayers/releases/latest",
+        "deviantart": "https://www.deviantart.com/jaxoriginals/art/Keystrokes-v1-3-889349339",
+        "download_api": "https://api.github.com/repos/EnhancedJax/KeyStrokes/releases/latest",
         "install_name": "KeyStrokes"
 	},
 	{
@@ -31,8 +31,8 @@ const modules_data = `[
 		"subs": "Quickly access your notes.",
 		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quis.",
 		"background": "img/skins/QuickNote.png",
-        "deviantart": "https://www.deviantart.com/jaxoriginals/art/ValliStart-Start-menu-replacement-893506095",
-        "download_api": "https://api.github.com/repos/EnhancedJax/ValliStart/releases/latest",
+        "deviantart": "https://www.deviantart.com/jaxoriginals/art/QuickNote-Quick-access-notepad-894951390",
+        "download_api": "https://api.github.com/repos/EnhancedJax/QuickNote/releases/latest",
         "install_name": "QuickNote"
 	},
     {
@@ -52,7 +52,7 @@ const widgets_data = `[
 		"subs": "Launch with combinations.",
 		"description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt architecto eaque aliquid perferendis saepe ipsa recusandae tempore perspiciatis non est quis vel, vitae reiciendis magnam voluptatum obcaecati, consequuntur sequi, distinctio cum nisi voluptas dolores fuga unde minima. Enim accusamus fugit, possimus tenetur minus praesentium veritatis, aliquam officia quod ex sequi sit eum libero porro, esse incidunt quaerat maiores molestias.",
 		"background": "img/skins/IdleStyle.png",
-        "deviantart": "https://www.deviantart.com/jaxoriginals/art/IdleStyle-Stylized-Screensaver-899004964",
+        "deviantart": "https://www.deviantart.com/jaxoriginals/art/Combilaunch-v1-3-881177085",
         "download_api": "https://api.github.com/repos/EnhancedJax/Combilaunch/releases/latest",
         "install_name": "Combilaunch"
     },
@@ -79,7 +79,7 @@ const widgets_data = `[
 		"subs": "System stats. DOS style.",
 		"description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, quis.",
 		"background": "img/skins/Plainext.png",
-        "deviantart": "https://www.deviantart.com/jaxoriginals/art/ValliStart-Start-menu-replacement-893506095",
+        "deviantart": "https://www.deviantart.com/jaxoriginals/art/Plainext-v1-8-881628513",
         "download_api": "https://api.github.com/repos/EnhancedJax/Plainext/releases/latest",
         "install_name": "Plainext"
 	}

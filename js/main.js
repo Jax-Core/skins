@@ -179,8 +179,13 @@ function ShowMainPreview(data) {
 		}
 	})
 
-	skininstall.addEventListener('click', (event) => {
-		location.href = `rm-coreinstaller:[!ActivateConfig "#JaxCore\\CoreInstaller"][!CommandMeasure DelayedBanger "GetSkin('${data.install}')" "#JaxCore\\CoreInstaller"`
+    skininstall.addEventListener('click', (event) => {
+		Swal.fire({
+			title: '<p class="title has-text-white">This is a WIP feature. Stay tuned!</p>',
+			icon: 'info',
+			background: '#181a1b',
+		})
+		// location.href = `rm-coreinstaller:[!ActivateConfig "#JaxCore\\CoreInstaller"][!CommandMeasure DelayedBanger "GetSkin('${data.install}')" "#JaxCore\\CoreInstaller"`
 	})
 
 	modal.classList.remove('is-inactive')
