@@ -30,7 +30,7 @@ const modules_data = `[
 		"title": "ValliStart",
 		"subs": "A modern start menu replacement.",
 		"description": "This module replaces the default windows start menu with an animated, fancy control center. Featuring 8 different color schemes for you to use, and have 15+ customization options.",
-		"background": "img/skins/Vallistart.png",
+		"background": "img/skins/ValliStart.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/ValliStart-Start-menu-replacement-893506095",
         "download_api": "https://api.github.com/repos/EnhancedJax/ValliStart/releases/latest",
         "install_name": "ValliStart"
