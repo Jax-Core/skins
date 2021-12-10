@@ -21,7 +21,7 @@ const modules_data = `[
 		"title": "QuickNote",
 		"subs": "Quick access notepad.",
 		"description": "A quick note module to improve your productivity. Easy row manipulation, smooth transitional animations.",
-		"background": "img/skins/Keystrokes.png",
+		"background": "img/skins/QuickNote.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/QuickNote-Quick-access-notepad-894951390",
         "download_api": "https://api.github.com/repos/EnhancedJax/QuickNote/releases/latest",
         "install_name": "QuickNote"
@@ -30,11 +30,20 @@ const modules_data = `[
 		"title": "ValliStart",
 		"subs": "A modern start menu replacement.",
 		"description": "This module replaces the default windows start menu with an animated, fancy control center. Featuring 8 different color schemes for you to use, and have 15+ customization options.",
-		"background": "img/skins/QuickNote.png",
+		"background": "img/skins/Vallistart.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/ValliStart-Start-menu-replacement-893506095",
         "download_api": "https://api.github.com/repos/EnhancedJax/ValliStart/releases/latest",
         "install_name": "ValliStart"
 	},
+    {
+        "title": "Keystrokes",
+		"subs": "Stream your keys strokes with style.",
+		"description": "View your live keypresses on screen. Featuring built in layout customizer, RGB chroma support and mouse accelerometer.",
+		"background": "img/skins/Keystrokes.png",
+        "deviantart": "https://www.deviantart.com/jaxoriginals/art/MIUI-Shade-v2-0-885183361",
+        "download_api": "https://api.github.com/repos/EnhancedJax/MIUI-Shade/releases/latest",
+        "install_name": "MIUI-Shade"
+    },
     {
         "title": "MIUI-Shade",
 		"subs": "MIUI dropdown menu, on the desktop.",
