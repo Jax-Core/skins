@@ -134,6 +134,37 @@ var deviantart = document.getElementById('deviantart-button')
 var skindownload = document.getElementById('download-button')
 var skininstall = document.getElementById('install-button')
 
+deviantart.addEventListener('click', (event) => {
+	window.open(deviantart.getAttribute('data-deviantart'))
+})
+
+skindownload.addEventListener('click', (event) => {
+	if (navigator.userAgent.indexOf('Win') == -1) {
+		Swal.fire({
+			title: '<p style="color: #facea8">Incompatible Device</p>',
+			html: 'This software is intended for Windows devices only. Download anyway?',
+			icon: 'warning',
+			imageWidth: 128,
+			imageHeight: 128,
+			background: '#181a1b',
+			showDenyButton: true,
+			confirmButtonText: 'Download',
+			denyButtonText: 'Cancel',
+		}).then((result) => {
+			if (result.isDenied) {
+				return
+			}
+		})
+	}
+	DownloadLatestSkin(skindownload.getAttribute('data-download'))
+})
+
+skininstall.addEventListener('click', (event) => {
+	location.href = `rm-coreinstaller:[!ActivateConfig "#JaxCore\\CoreInstaller"][!CommandMeasure DelayedBanger "GetSkin('${skininstall.getAttribute(
+		'data-install'
+	)}')" "#JaxCore\\CoreInstaller"]`
+})
+
 if (navigator.userAgent.indexOf('Win') == -1) {
 	skininstall.style.display = 'none'
 }
@@ -153,35 +184,9 @@ function ShowMainPreview(data) {
 	mainPreviewDescription.textContent = data.description
 	mainPreviewImage.src = data.image
 
-	deviantart.addEventListener('click', (event) => {
-		window.open(data.deviantart)
-	})
-
-	skindownload.addEventListener('click', (event) => {
-		if (navigator.userAgent.indexOf('Win') == -1) {
-			Swal.fire({
-				title: '<p style="color: #facea8">Incompatible Device</p>',
-				html: 'This software is intended for Windows devices only. Download anyway?',
-				icon: 'warning',
-				imageWidth: 128,
-				imageHeight: 128,
-				background: '#181a1b',
-				showDenyButton: true,
-				confirmButtonText: 'Download',
-				denyButtonText: 'Cancel',
-			}).then((result) => {
-				if (result.isConfirmed) {
-					DownloadLatestSkin(data.download)
-				}
-			})
-		} else {
-			DownloadLatestSkin(data.download)
-		}
-	})
-
-    skininstall.addEventListener('click', (event) => {
-        location.href = `rm-coreinstaller:[!ActivateConfig "#JaxCore\\CoreInstaller"][!CommandMeasure DelayedBanger "GetSkin('${data.install}')" "#JaxCore\\CoreInstaller"]`
-	})
+	deviantart.setAttribute('data-deviantart', data.deviantart)
+	skindownload.setAttribute('data-download', data.download)
+	skininstall.setAttribute('data-install', data.install)
 
 	modal.classList.remove('is-inactive')
 	modal.classList.add('is-active')
