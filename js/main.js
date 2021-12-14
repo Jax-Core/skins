@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			skin.background
 		cardClone.querySelector('.title').textContent = skin.title
 		cardClone.querySelector('.subtitle').textContent = skin.subs
-		cardClone.querySelector('.skinDesc').textContent = skin.description
+		cardClone.querySelector('.skinDesc').innerHTML = skin.description
 
 		let box = cardClone.querySelector('.box')
 
