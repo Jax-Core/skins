@@ -5,7 +5,7 @@ const modules_data = `[
 		"description": "A gallery of custom and pre-made screensavers to stylized your idle desktop. Tired of your lifeless desktop? Choose one of the animated styles! Get IdleStyle today!",
 		"background": "img/skins/IdleStyle.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/IdleStyle-Stylized-Screensaver-899004964",
-        "download_api": "https://api.github.com/repos/EnhancedJax/IdleStyle/releases/latest",
+        "download_api": "https://api.github.com/repos/Jax-Core/IdleStyle/releases/latest",
         "install_name": "IdleStyle"
     },
 	{
@@ -14,7 +14,7 @@ const modules_data = `[
 		"description": "Now you can launch apps easily with just a press of a hotkey! Comes with various types of animation and an easy to customize list of applications",
 		"background": "img/skins/Keylaunch.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/Keylaunch-1-45-890749449",
-        "download_api": "https://api.github.com/repos/EnhancedJax/KeyLaunch/releases/latest",
+        "download_api": "https://api.github.com/repos/Jax-Core/KeyLaunch/releases/latest",
         "install_name": "KeyLaunch"
 	},
 	{
@@ -23,7 +23,7 @@ const modules_data = `[
 		"description": "A quick note module to improve your productivity. Easy row manipulation, smooth transitional animations.",
 		"background": "img/skins/QuickNote.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/QuickNote-Quick-access-notepad-894951390",
-        "download_api": "https://api.github.com/repos/EnhancedJax/QuickNote/releases/latest",
+        "download_api": "https://api.github.com/repos/Jax-Core/QuickNote/releases/latest",
         "install_name": "QuickNote"
 	},
 	{
@@ -32,7 +32,7 @@ const modules_data = `[
 		"description": "This module replaces the default windows start menu with an animated, fancy control center. Featuring 8 different color schemes for you to use, and have 15+ customization options.",
 		"background": "img/skins/ValliStart.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/ValliStart-Start-menu-replacement-893506095",
-        "download_api": "https://api.github.com/repos/EnhancedJax/ValliStart/releases/latest",
+        "download_api": "https://api.github.com/repos/Jax-Core/ValliStart/releases/latest",
         "install_name": "ValliStart"
 	},
     {
@@ -40,9 +40,9 @@ const modules_data = `[
 		"subs": "Stream your keys strokes with style.",
 		"description": "View your live keypresses on screen. Featuring built in layout customizer, RGB chroma support and mouse accelerometer.",
 		"background": "img/skins/Keystrokes.png",
-        "deviantart": "https://www.deviantart.com/jaxoriginals/art/MIUI-Shade-v2-0-885183361",
-        "download_api": "https://api.github.com/repos/EnhancedJax/MIUI-Shade/releases/latest",
-        "install_name": "MIUI-Shade"
+        "deviantart": "https://www.deviantart.com/jaxoriginals/art/Keystrokes-v1-3-889349339",
+        "download_api": "https://api.github.com/repos/Jax-Core/Keystrokes/releases/latest",
+        "install_name": "Keystrokes"
     },
     {
         "title": "MIUI-Shade",
@@ -62,7 +62,7 @@ const widgets_data = `[
 		"description": "A package of hand-crafted Rainmeter clocks. Works with most wallpapers, easy to customize.",
 		"background": "img/skins/ModularClocks.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/ModularClocks-v2-1-883898019",
-        "download_api": "https://api.github.com/repos/EnhancedJax/ModularClocks/releases/latest",
+        "download_api": "https://api.github.com/repos/Jax-Core/ModularClocks/releases/latest",
         "install_name": "ModularClocks"
 	},
 	{
@@ -71,7 +71,7 @@ const widgets_data = `[
 		"description": "A package of hand-crafted media players which looks like notification toasts.",
 		"background": "img/skins/ModularPlayers.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/ModularPlayers-v1-3-886577256",
-        "download_api": "https://api.github.com/repos/EnhancedJax/ModularPlayers/releases/latest",
+        "download_api": "https://api.github.com/repos/Jax-Core/ModularPlayers/releases/latest",
         "install_name": "ModularPlayers"
 	},
 	{
@@ -80,7 +80,7 @@ const widgets_data = `[
 		"description": "View various system information like time, resource usage, internet, recycle bin. Easy to customize.",
 		"background": "img/skins/Plainext.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/Plainext-v1-8-881628513",
-        "download_api": "https://api.github.com/repos/EnhancedJax/Plainext/releases/latest",
+        "download_api": "https://api.github.com/repos/Jax-Core/Plainext/releases/latest",
         "install_name": "Plainext"
 	},
 	{
@@ -89,7 +89,7 @@ const widgets_data = `[
 		"description": "Launch apps with combination locks. Comes with an easy to customize application list",
 		"background": "img/skins/Combilaunch.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/Combilaunch-v1-3-881177085",
-        "download_api": "https://api.github.com/repos/EnhancedJax/Combilaunch/releases/latest",
+        "download_api": "https://api.github.com/repos/Jax-Core/Combilaunch/releases/latest",
         "install_name": "Combilaunch"
     }
 ]`
