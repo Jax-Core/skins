@@ -163,6 +163,16 @@ skininstall.addEventListener('click', (event) => {
 	location.href = `rm-coreinstaller:[!ActivateConfig "#JaxCore\\CoreInstaller"][!CommandMeasure DelayedBanger "GetSkin('${skininstall.getAttribute(
 		'data-install'
 	)}')" "#JaxCore\\CoreInstaller"]`
+	Swal.fire({
+		title: '<p style="color: #fefefe">Opening CoreInstaller...</p>',
+		html: `<p style="color: #DCDCDC">If nothing happens make sure you have JaxCore installed and WebInstallation turned on from Settings.</p>`,
+		icon: 'info',
+		imageWidth: 128,
+		imageHeight: 128,
+		background: '#181a1b',
+		showDenyButton: false,
+		confirmButtonText: 'Okay',
+	})
 })
 
 if (navigator.userAgent.indexOf('Win') == -1) {
