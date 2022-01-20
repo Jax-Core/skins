@@ -132,7 +132,7 @@ var mainPreviewDescription = document.querySelector('#main-preview-description')
 var mainPreviewImage = document.querySelector('#main-preview-image')
 var deviantart = document.getElementById('deviantart-button')
 var skindownload = document.getElementById('download-button')
-var skininstall = document.getElementById('install-button')
+// var skininstall = document.getElementById('install-button')
 
 deviantart.addEventListener('click', (event) => {
 	window.open(deviantart.getAttribute('data-deviantart'))
@@ -159,7 +159,7 @@ skindownload.addEventListener('click', (event) => {
 	DownloadLatestSkin(skindownload.getAttribute('data-download'))
 })
 
-skininstall.addEventListener('click', (event) => {
+/*skininstall.addEventListener('click', (event) => {
 	location.href = `rm-coreinstaller:[!ActivateConfig "#JaxCore\\CoreInstaller"][!CommandMeasure DelayedBanger "GetSkin('${skininstall.getAttribute(
 		'data-install'
 	)}')" "#JaxCore\\CoreInstaller"]`
@@ -177,7 +177,7 @@ skininstall.addEventListener('click', (event) => {
 
 if (navigator.userAgent.indexOf('Win') == -1) {
 	skininstall.style.display = 'none'
-}
+}*/
 
 var modalBack = document.getElementById('modal-background')
 
