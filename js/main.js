@@ -196,7 +196,7 @@ function ShowMainPreview(data) {
 
 	deviantart.setAttribute('data-deviantart', data.deviantart)
 	skindownload.setAttribute('data-download', data.download)
-	skininstall.setAttribute('data-install', data.install)
+	// skininstall.setAttribute('data-install', data.install)
 
 	modal.classList.remove('is-inactive')
 	modal.classList.add('is-active')
