@@ -56,7 +56,16 @@ const modules_data = `[
 ]`
 
 const widgets_data = `[
-    {
+	{
+		"title": "ModularVisualizer",
+		"subs": "The most customizable audio visualizer.",
+		"description": "Customizable visualizer that includes a plethora of pre-built layouts and over 40+ options to experiment with, as well as an additional 3D overlay module for creating layering effects.",
+		"background": "img/skins/ModularPlayers.png",
+        "deviantart": "https://www.deviantart.com/jaxoriginals/art/903806619",
+        "download_api": "https://api.github.com/repos/Jax-Core/ModularVisualizer/releases/latest",
+        "install_name": "ModularVisualizer"
+	},
+	{
 		"title": "ModularClocks",
 		"subs": "A modern clock for your screen.",
 		"description": "A package of hand-crafted Rainmeter clocks. Works with most wallpapers, easy to customize.",
