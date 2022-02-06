@@ -6,7 +6,7 @@ const modules_data = `[
 		"background": "img/skins/YourMixer.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/YourMixer-OSD-AppVolume-Mixer-905969076",
         "download_api": "https://api.github.com/repos/Jax-Core/YourMixer/releases/latest",
-        "install_name": "YourMixer"
+        "install_name": "YourMixerBanner"
     },
     {
         "title": "IdleStyle",
