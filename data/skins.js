@@ -3,10 +3,10 @@ const modules_data = `[
         "title": "YourMixer",
 		"subs": "A custom volume mixer to replace the default one.",
 		"description": "YourMixer is a Rainmeter skin that replaces the standard Windows Volume Mixer with a fully customizable volume controller, with built in system tray support and much more.",
-		"background": "img/skins/YourMixer.png",
+		"background": "img/skins/YourMixerBanner.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/YourMixer-OSD-AppVolume-Mixer-905969076",
         "download_api": "https://api.github.com/repos/Jax-Core/YourMixer/releases/latest",
-        "install_name": "YourMixerBanner"
+        "install_name": "YourMixer"
     },
     {
         "title": "IdleStyle",
