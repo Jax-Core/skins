@@ -1,15 +1,24 @@
 const modules_data = `[
     {
+        "title": "YourFlyouts",
+		"subs": "Windows Audio / Volume flyouts replacement.",
+		"description": "YourFlyouts provides multiple replacements for the old, built-in, Metro Design based Audio/Media/Brightness flyouts in Windows which are shown while pressing the media or volume keys.",
+		"background": "img/skins/YourFlyouts.png",
+        "deviantart": "https://www.deviantart.com/jaxoriginals/art/919259685",
+        "download_api": "https://api.github.com/repos/Jax-Core/YourFlyouts/releases/latest",
+        "install_name": "YourFlyouts"
+    },
+    {
         "title": "YourMixer",
 		"subs": "A custom volume mixer to replace the default one.",
 		"description": "YourMixer is a Rainmeter skin that replaces the standard Windows Volume Mixer with a fully customizable volume controller, with built in system tray support and much more.",
-		"background": "img/skins/YourMixerBanner.png",
+		"background": "img/skins/YourMixer.png",
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/YourMixer-OSD-AppVolume-Mixer-905969076",
         "download_api": "https://api.github.com/repos/Jax-Core/YourMixer/releases/latest",
         "install_name": "YourMixer"
     },
     {
-        "title": "IdleStyle",
+		"title": "IdleStyle",
 		"subs": "Screensaver reimagined.",
 		"description": "A gallery of custom and pre-made screensavers to stylized your idle desktop. Tired of your lifeless desktop? Choose one of the animated styles! Get IdleStyle today!",
 		"background": "img/skins/IdleStyle.png",
@@ -17,6 +26,15 @@ const modules_data = `[
         "download_api": "https://api.github.com/repos/Jax-Core/IdleStyle/releases/latest",
         "install_name": "IdleStyle"
     },
+	{
+		"title": "ValliStart",
+		"subs": "A modern start menu replacement.",
+		"description": "This module replaces the default windows start menu with an animated, fancy control center. Featuring 8 different color schemes for you to use, and have 15+ customization options.",
+		"background": "img/skins/ValliStart.png",
+		"deviantart": "https://www.deviantart.com/jaxoriginals/art/ValliStart-Start-menu-replacement-893506095",
+		"download_api": "https://api.github.com/repos/Jax-Core/ValliStart/releases/latest",
+		"install_name": "ValliStart"
+	},
 	{
 		"title": "KeyLaunch",
 		"subs": "Launch apps with your keyboard.",
@@ -34,15 +52,6 @@ const modules_data = `[
         "deviantart": "https://www.deviantart.com/jaxoriginals/art/QuickNote-Quick-access-notepad-894951390",
         "download_api": "https://api.github.com/repos/Jax-Core/QuickNote/releases/latest",
         "install_name": "QuickNote"
-	},
-	{
-		"title": "ValliStart",
-		"subs": "A modern start menu replacement.",
-		"description": "This module replaces the default windows start menu with an animated, fancy control center. Featuring 8 different color schemes for you to use, and have 15+ customization options.",
-		"background": "img/skins/ValliStart.png",
-        "deviantart": "https://www.deviantart.com/jaxoriginals/art/ValliStart-Start-menu-replacement-893506095",
-        "download_api": "https://api.github.com/repos/Jax-Core/ValliStart/releases/latest",
-        "install_name": "ValliStart"
 	},
     {
         "title": "Keystrokes",
